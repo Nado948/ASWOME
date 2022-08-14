@@ -1,0 +1,406 @@
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+}
+
+.container 
+
+{
+    width: 100%;
+    height:1200px;
+    font-family:'Noto Sans', sans-serif;
+}
+
+/*Header*/
+header 
+{
+    width: 100%;
+    height:80px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color:rgb(6, 6, 37);
+    color:white;
+    position:fixed;
+    z-index:999;
+}
+
+.logo 
+{
+    width: 49%;
+}
+
+nav 
+{
+    width:50%;
+    height: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+   
+}
+
+nav a 
+{
+    text-decoration: none;
+    font-family:'Noto Sans', sans-serif;
+    color: rgb(255, 255, 255);
+    transition:0.55555s ease-in-out;
+    
+}
+nav a:hover , .navresponsive a:hover
+{
+    color: rgb(19, 3, 3);
+    background-color: rgb(252, 252, 252);
+    padding: 10px;
+    border-radius:10px;
+}
+
+.logo 
+{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding-left:10px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size:35px;
+    width: 50%;
+    height:100%;
+}
+
+.bar 
+{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top:35%;
+    right:10%;
+    transform: translate(-50% , 50%);
+    font-size: 19px;
+    display: none;
+    
+}
+
+.navresponsive 
+{
+    width:20%;
+    background-color:rgb(6, 6, 37);
+  display: flex;
+  flex-direction: column;
+  text-align:center;
+  opacity: 0;
+  transition:0.5s all;
+}
+
+.navresponsive a 
+{
+    text-decoration: none;
+    color: white;
+    margin:10px 0px;
+    font-family:'Noto Sans', sans-serif;
+    width:10%;
+    display:block;
+    margin:20px auto;
+    width:20%;
+    transition:0.5s ease-in-out;
+}
+/*Header*/
+/**********************************************************/
+
+/*Homepage*/
+.Homepage
+{
+    position: absolute;
+    top:70px;
+    width: 100%;
+    height:650px;
+    display: flex;
+    justify-content:space-between;
+    background-image: linear-gradient(to right , rgb(5, 15, 24) ,rgb(24, 8, 63));
+}
+
+.content 
+{
+    width:45%;
+    padding:0px 20px;
+    color: white;
+    text-align: center;
+    margin-top:12%;
+
+}
+
+.content p 
+{
+    width: 100%;
+    margin-bottom:25px;
+    font-size:24px;
+    text-transform: capitalize;
+    letter-spacing:5px;
+}
+
+.content button 
+{
+    margin: 40px auto;
+    display: block;
+    padding:20px 30px;
+    border:1px solid white;
+    background-color: rgba(14, 12, 12 , .2);
+    color: white;
+    border-radius:5px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.content button:hover 
+{
+    background-color: rgba(145, 145, 145, 0.7);
+}
+
+.content i 
+{  
+    font-size:3em;
+    animation-name:move;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+}
+.Background
+{
+    width: 48%;
+}
+
+.Background img 
+{
+    width:95%;
+}
+
+@keyframes move {
+    0%{transform: translateY(-10px);transition:1s;}
+    25%{transform: translateY(10px);transition:1s;}
+    50%{transform: translateY(-10px); transition:1s;}
+    75%{transform: translateY(10px);transition:1s;}
+    100%{transform: translateY(-10px);}
+}
+/*Homepag*/
+/********************************************/
+
+/*About*/
+.About 
+{
+    width: 100%;
+    height: 480px;
+    background-color: rgba(245, 244, 244, 0.8);
+    position: relative;
+    top:60%;
+    padding:30px;
+    text-align: center;
+}
+
+.About span , .Team span , .portofolio span 
+{
+    color: rgb(58, 13, 173);
+}
+.Features
+{
+  margin-top:30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height:75%;
+  opacity:0;
+}
+
+.Featutre 
+{
+    width: 32%;
+    border: 5px solid rgb(214, 207, 207);
+    padding-top:10px;
+    padding-right:5px;
+    padding-left:5px;
+    text-align: center;
+}
+
+.Featutre i 
+{
+    font-size:5em;
+    margin-bottom:1%;
+    padding:5px 50px;
+}
+.Featutre h5 
+{
+    font-size:20px;
+    margin-bottom:5%;
+}
+.Featutre p 
+{
+    width:90%;
+    margin: auto;
+    line-height:25px;
+    font-weight: bolder;
+}
+/*About*/
+/***************************************************/
+
+
+/*Team*/
+.Team 
+{
+    position: relative;
+    top:60%;
+    padding:1em;
+    width: 100%;
+    height:690px;
+    text-align: center;
+
+}
+
+.members 
+{
+    width: 100%;
+    height:80%;
+    padding:1em;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    opacity:0;
+}
+.member 
+{
+    width:24%;
+    background-color:rgb(235, 230, 230);
+    padding:0px 1px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.member h5 
+{
+    font-size: 20px;
+}
+
+.member img 
+{
+    width: 100%;
+}
+.member span
+{
+    color: rgb(0, 0, 255);
+    font-size: 15px;
+    display: block;
+    font-family:sans-serif , 'open-sans';
+    font-weight: bolder;
+}
+
+.member img , .member h5 , .member span 
+{
+    margin-bottom: 10px;
+}
+.member p 
+{
+   width:98%;
+   line-height:22px;
+   color: rgb(110, 108, 108);
+}
+
+.member:hover 
+{
+    opacity:0.5;
+    transform: translateY(-5px);
+}
+/*Team*/
+/*********************************/
+
+/*Responsive*/
+/* Landscape phones and portrait tablets */
+
+@media (max-width: 767px) {
+    /*Header*/
+
+    nav 
+    {
+        display: none;
+    }
+    .logo 
+    {
+      width:90%;
+      padding: 0;
+      font-size: 25px;
+    }
+
+    .bar {
+        display:block;
+    }
+    .navresponsive.active
+    {
+        width: 100%;
+        opacity: 1;
+    }
+/*Header*/
+
+/*Homepage*/
+
+    .Background 
+    {
+        display: none;
+    }
+    .content 
+    {
+        margin-top:150px;
+        width: 100%;
+    }
+    /*Homepage*/
+
+    /*About*/
+    .About 
+    {
+        height:1050px;
+    }
+    .Features , .members 
+
+    {
+        flex-wrap: wrap;
+        gap:15px;
+
+    }
+
+    .Featutre , .member
+    {
+        width: 100%;
+        padding-bottom:10px;
+    }
+    /*About*/
+   
+   
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .Featutre 
+    {
+        width:32%;
+        font-size:12px;
+    }
+   
+    .member 
+    {
+        width:48%;
+        margin-top:2%;
+        padding-bottom: 20px;
+    }
+}
+
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+   
+
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+    
+
+}
